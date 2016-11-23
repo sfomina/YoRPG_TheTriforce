@@ -74,7 +74,7 @@ public class YoRPG
 	catch ( IOException e ) { }
 
 	s = "Intrepid traveler, what doth thy call thyself? (State your name): ";
-	System.out.print( s );
+	System.out.print( s);
 
 	try {
 	    name = in.readLine();
@@ -83,28 +83,33 @@ public class YoRPG
 
 	//instantiate the player's character
 	s = "Choose a type of character: \n";
-	s+= "\t1 Warrior: " + pat.about("Warrior") + "\n";
-	s+= "\t2 Mage: " + pat.about("Mage") + "\n";
-	s+= "\t3 Rogue: " + pat.about("Rogue") + "\n";
-	s+= "\t4 Ranger: " + pat.about("Ranger") + "\n";
-	s+= "\t5 Trainer: " + pat.about("Trainer") + "\n";
+	s+= "\t1 Warrior\n";
+	s+= "\t2 Mage\n";
+	s+= "\t3 Rogue\n";
+	s+= "\t4 Ranger\n";
+	s+= "\t5 Trainer\n";
 	System.out.print(s);
 	try{
 	    int type = Integer.parseInt(in.readLine());
 	    if (type == 1){
 		pat = new Warrior( name );
+		System.out.print("You are now a Warrior: " + pat.about());
 	    }
 	    if (type == 2){
 		pat = new Mage( name );
+		System.out.print("You are now a Warrior: " + pat.about());
 	    }
 	    if (type == 3){
 		pat = new Rogue( name );
+		System.out.print("You are now a Warrior: " + pat.about());
 	    }
 	    if (type == 4){
 		pat = new Ranger( name );
+		System.out.print("You are now a Warrior: " + pat.about());
 	    }
 	    if (type == 5){
 		pat = new Trainer ( name );
+		System.out.print("You are now a Warrior: " + pat.about());
 	    }
 	}
 	catch ( IOException e ) { }
