@@ -22,26 +22,16 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	super();
 	_hitPts = 150; 
 	_strength = 20 + ((int) (Math.random() *45));
-	_defense = 20;
+	_defense = 30;
 	_attack = 1;
     }
 
+     // Monster's only move functions according to the attack() defined in Character
+    public int attack(Character opponent){
+	 return super.attack(opponent, _accuracy, _strength);
+     }
 
-    /*=============================================
-      overloaded constructor
-      pre:  instance vars are declared
-      post: initializes instance vars. _name is set to input String.
-      =============================================*/
-    public Monster( String name ) {
-	this();
-	_name = name;
-    }
-
-
-    // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
-    public String getName() { return _name; }
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     //overwriting abstract method 
+    //overwriting abstract method 
      public void normalize(){
 	 _attack = 1;
 	 _defense = 20;

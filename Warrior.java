@@ -31,6 +31,9 @@ public class Warrior extends Character {
       =============================================*/
     public Warrior() {
 	super();
+	_accuracy = 0.5;
+	_type = "Warrior";
+	 _moves = new String[]  {"slash", "charge" ,"kingArthurSlam"}; 
     }
 
 
@@ -47,18 +50,43 @@ public class Warrior extends Character {
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { return _name; }
+
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public String about(){
 	return "Strong, not very agile, low defenses";
     }
+    //~~~~~~~~~~~~~~~~~~~MOVES ~~~~~~~~~~~~~~~~~~~~~
+    public int charge(Character opponent) {
+	normalize();
+	double chargeAccuracy = _accuracy - 0.2;
+	int chargeStrength = _strength + 5;
+	return super.attack(opponent, chargeAccuracy, chargeStrength);
+    }
+
+    public int slash(Character opponent){
+	normalize();
+	double slashAccuracy = _accuracy + 0.2;
+	int slashStrength = _strength - 5;
+	return super.attack(opponent, slashAccuracy, slashStrength);
+    }
+    
+    public int kingArthurSlam (Character opponent){
+	specialize();
+	return charge(opponent); 
+    }
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     public void specialize() {
-	_defense = 20;
-	_attack = 0.75; 
+	_attack = 0.75;
+	_specialPts = 0;
     }
     public void normalize(){
 	_defense = 40;
 	_attack = 0.4;
+    }
+    public static void main (String[] args) {
+	Character john = new Warrior();
+	System.out.println(john.getMoves());
     }
 }//end class Warrior
 

@@ -23,6 +23,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	_strength = 60;
 	_attack = 0.7;
 	_defense = 50;
+	//add _accuracy, for reference Warrior accuracy is 0.5
+	_type = "Mage";
+	// add _moves; see Warrior constructor 
     }
 
 
@@ -39,6 +42,7 @@ HW32 -- Ye Old Role Playing Game, Expanded
 
     // ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { return _name; }
+     
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      //overwriting abstract method 
      public void normalize(){
@@ -48,10 +52,14 @@ HW32 -- Ye Old Role Playing Game, Expanded
 
      //overwriting abstract method 
      public void specialize(){
-	 _attack = 0.5;
 	 _defense = 70;
      }
 
+    //~~~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+     //should be 3 of them see warrior for reference 
+
+     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
 	 return "Description of Mage";
      } 

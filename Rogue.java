@@ -21,6 +21,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
     public Rogue() {
 	super();
 	_strength = 80;
+	//add _accuracy for reference Warrior  accuracy is 0.5
+	//add _moves see Warrior onsturctor
+	_type = "Rogue";
     }
 
 
@@ -50,6 +53,14 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	 _defense = 50;
      }
 
+     //~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~
+
+     //see warrior for refernce 
+     
+     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+     
      public String about(){
 	 return "Description of Rogue";
      } 

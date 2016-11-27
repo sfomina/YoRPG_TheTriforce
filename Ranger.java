@@ -29,6 +29,9 @@ public class Ranger extends Character {
 	_strength = 75; 
 	_defense = 30;
 	_attack = 1;
+	//add accuracy for reference Warrior accuracy is 0.5
+	//add _moves see Warrior constructor
+	_type = "Ranger";
     }
 
 
@@ -56,7 +59,13 @@ public class Ranger extends Character {
     public void normalize(){
 	_attack = 1;
 	_defense = 30;
-    } 
+    }
+
+    //~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~
+
+    //see warrior for reference
+    
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //overwriting abstract method in super 
     public String about(){

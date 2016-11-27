@@ -23,6 +23,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	_strength = 110;
 	_defense = 10;
 	_attack = 1.3;
+	_type = "Trainer";
+	//add acuracy for reference Warrior accuracy is 0.5
+	//add _moves see warrior constructor 
     }
 
 
@@ -52,8 +55,13 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	 _defense = 5;
      }
 
+     //~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~
+
+     //see warrior for reference 
+     
+     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
 	 return "Description of Trainer";
      } 
-}//end class Rogue
+}//end class trainer
 

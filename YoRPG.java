@@ -142,18 +142,26 @@ public class YoRPG
 		// If you land a hit, you incur greater damage,
 		// ...but if you get hit, you take more damage.
 		try {
-		    System.out.println( "\nDo you feel lucky?" );
-		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    System.out.println( "\nYour Move:" );
+		    System.out.println(pat.getMoves());
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
 
-		if ( i == 2 )
-		    pat.specialize();
-		else
-		    pat.normalize();
+		
+		if (pat.getType() == "Warrior" && i == 1){
+		    d1 = ((Warrior) pat).slash(smaug);}
+		
+		else if (pat.getType() == "Warrior" && i == 2) {
+		    d1 = ((Warrior) pat).charge(smaug);}
 
-		d1 = pat.attack( smaug );
+		else if (pat.getType() == "Warrior" && i == 3){
+		    d1 = ((Warrior) pat).kingArthurSlam(smaug);}
+		
+		//INSERT MOVES of OTHER CLASSES
+		else {d1 = 0;}
+		    
+
 		d2 = smaug.attack( pat );
 
 		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
