@@ -36,7 +36,7 @@ _In Character:_
 2. catapult
 3. special - throwBomb
 
-- **Trainer**
+**Trainer**
 
 _In YoRPG:_                                                                                                                                                   
 -Instead of choose yay or nay you choose your move; special move pops up when special points reach 150
