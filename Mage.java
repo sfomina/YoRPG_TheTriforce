@@ -78,6 +78,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
 	 return "Description of Mage";
-     } 
+     }
+
+     public static void main(String[] args){ }
+	 
 }//end class Mage
 
