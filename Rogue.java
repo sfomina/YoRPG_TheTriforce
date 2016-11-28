@@ -80,6 +80,10 @@ HW32 -- Ye Old Role Playing Game, Expanded
      
      public String about(){
 	 return "Agile and sneaky, but lacking in power";
-     } 
+	 
+     }
+
+     public static void main(String[] args){
+     }
 }//end class Rogue
 
