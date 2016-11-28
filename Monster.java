@@ -8,7 +8,7 @@ HW32 -- Ye Old Role Playing Game, Expanded
  public class Monster extends Character {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
-    private String _name = "J. Doe";
+    private String _name = "J. Doe"; 
     // other attribs inerited from superclass
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -28,7 +28,13 @@ HW32 -- Ye Old Role Playing Game, Expanded
 
      // Monster's only move functions according to the attack() defined in Character
     public int attack(Character opponent){
-	 return super.attack(opponent, _accuracy, _strength);
+	int damage = super.attack(opponent, _accuracy, _strength);
+	if (_poisoned) {
+	    return (damage - 5);
+	}
+	else {
+	    return damage;
+	}
      }
 
     //overwriting abstract method 

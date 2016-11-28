@@ -127,7 +127,8 @@ public class YoRPG
     public boolean playTurn() {
 
 	int i = 1;
-	int d1, d2;
+	int d2;
+	int d1 = 0;
 
 	if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
@@ -137,10 +138,15 @@ public class YoRPG
 	    smaug = new Monster();
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
-
-		// Give user the option of using a special attack:
-		// If you land a hit, you incur greater damage,
-		// ...but if you get hit, you take more damage.
+		while (smaug.getPoisoned()){
+		    smaug.lowerHP(d1);
+		    d2 = smaug.attack( pat );
+		    System.out.println( "\n Poison still in effect - the poison of " + pat.getName() + " dealt" + d1 + " points of damage.");
+		    System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+				    " for " + d2 + " points of damage.");
+		    smaug.setPoisoned(false);
+		    
+		}
 		try {
 		    System.out.println( "\nYour Move:" );
 		    System.out.println(pat.getMoves());
@@ -148,7 +154,7 @@ public class YoRPG
 		}
 		catch ( IOException e ) { }
 
-		
+		//Warrior moves
 		if (pat.getType() == "Warrior" && i == 1){
 		    d1 = ((Warrior) pat).slash(smaug);}
 		
@@ -157,9 +163,19 @@ public class YoRPG
 
 		else if (pat.getType() == "Warrior" && i == 3){
 		    d1 = ((Warrior) pat).kingArthurSlam(smaug);}
+
+		//Mage Moves 
+		else if (pat.getType() == "Mage" && i == 1) {
+		    d1 = ((Warrior) pat).heal();}
 		
+		else if (pat.getType() == "Mage" && i == 2) {
+		    d1 = ((Warrior) pat).posion(smaug);}
+
+		else if (pat.getType() == "Mage" && i == 3) {
+		    d1 = ((Warrior) pat).shieldOfFire(smaug);}
+		
+
 		//INSERT MOVES of OTHER CLASSES
-		else {d1 = 0;}
 		    
 
 		d2 = smaug.attack( pat );

@@ -20,7 +20,8 @@ public abstract class Character {
     protected double _accuracy;
     protected int _specialPts;
     protected String _type;
-    protected String[] _moves; 
+    protected String[] _moves;
+    protected boolean _poisoned; 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     /*=============================================
@@ -37,6 +38,7 @@ public abstract class Character {
 	_specialPts = 0;
 	_type =  "Character";
 	_moves = new String[3];
+	_poisoned = false;
     }
 
 
@@ -58,7 +60,9 @@ public abstract class Character {
 	return retStr;
     }
 
-    public String getType(){ return _type;} 
+    public String getType(){ return _type;}
+
+    public boolean getPoisoned() { return _poisoned;} 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     
@@ -124,6 +128,11 @@ public abstract class Character {
     public void incSpecPts (double effective) {
 	_specialPts += (int)(100 - effective * 100);
     }
+
+    public void setPoisoned(boolean value){
+	_poisoned = value;
+    }
+    
     // abstract void specialize()-abstract method ensures subclasses define it 
     public abstract void specialize();
     

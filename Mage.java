@@ -23,8 +23,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	_strength = 60;
 	_attack = 0.7;
 	_defense = 50;
-	//add _accuracy, for reference Warrior accuracy is 0.5
+	_accuracy = 0.6;
 	_type = "Mage";
+	_moves = new String[] {"heal" , "poison", "shieldOfFire"};
 	// add _moves; see Warrior constructor 
     }
 
@@ -56,8 +57,23 @@ HW32 -- Ye Old Role Playing Game, Expanded
      }
 
     //~~~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~~~~~~~~
+     public int heal() {
+	 int damage = 0;
+	 _hitPts += (int)(Math.random() *100);
+	 return damage;
+     }
 
-     //should be 3 of them see warrior for reference 
+     public int poison(Character opponent) {
+	 double poisonAccuracy = _accuracy - 0.2;
+	 int poisonStrength = _strength + 10;
+	 opponent.setPoisoned(true);
+	 return super.attack(opponent, poisonAccuracy, poisonStrength);	 
+     }
+
+     public int shieldOfFire(Character opponent){
+	 specialize();
+	 return super.attack(opponent,_accuracy, _strength);
+     }
 
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
