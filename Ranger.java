@@ -30,7 +30,7 @@ public class Ranger extends Character {
 	_defense = 30;
 	_attack = 1;
         _accuracy = 0.7;
-	_moves = new String[] {"shootArrow" , "throwBomb"};
+	_moves = new String[] {"shootArrow" ,"catapult" ,  "throwBomb"};
 	_type = "Ranger";
     }
 
@@ -67,6 +67,13 @@ public class Ranger extends Character {
 	double shootAccuracy =_accuracy - 0.1;
 	int shootStrength = _strength + 3;
 	return super.attack(opponent, shootAccuracy, shootStrength);
+    }
+
+    public int catapult(Character opponent) {
+	normalize();
+	double catapultAccuracy =_accuracy + 0.1;
+	int catapultStrength = _strength - 3;
+	return super.attack(opponent, catapultAccuracy, catapultStrength);
     }
     
     public int throwBomb(Character opponent) {
