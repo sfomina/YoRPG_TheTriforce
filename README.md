@@ -13,24 +13,24 @@ _In Character:_
  
  _Subclasses:_
  
-- **Warrior**
+ **Warrior**
  1. slash - more accurate, weaker 
  2. charge - less accurate, stronger
  3. special move is kingArthurSlam - like charge but even stronger
 
--**Mage**
+**Mage**
 
-1.heal - increases health
+1. heal - increases health
 2. poison - does damage on Monster and decreases damage Monster does on Character; not veryy accurate but lasts two turns
 3. special move is shieldofFire - the attack is not that great, but boosts defense considerabely
 
--**Rogue**
+**Rogue**
 
 1. quickpunch - accurate, not too strong
 2. confuse - strong, not very accurate
 3. special move is sneak attack - like quickpunch except with higher attack
 
--**Ranger**
+**Ranger**
 
 1. shootArrow
 2. catapult
