@@ -32,7 +32,7 @@ _In Character:_
 
 -**Ranger**
 
-1.shootArrow
+1. shootArrow
 2. catapult
 3. special - throwBomb
 
