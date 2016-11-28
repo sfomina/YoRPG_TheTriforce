@@ -97,19 +97,19 @@ public class YoRPG
 	    }
 	    if (type == 2){
 		pat = new Mage( name );
-		System.out.print("You are now a Warrior: " + pat.about());
+		System.out.print("You are now a Mage: " + pat.about());
 	    }
 	    if (type == 3){
 		pat = new Rogue( name );
-		System.out.print("You are now a Warrior: " + pat.about());
+		System.out.print("You are now a Rogue: " + pat.about());
 	    }
 	    if (type == 4){
 		pat = new Ranger( name );
-		System.out.print("You are now a Warrior: " + pat.about());
+		System.out.print("You are now a Ranger: " + pat.about());
 	    }
 	    if (type == 5){
 		pat = new Trainer ( name );
-		System.out.print("You are now a Warrior: " + pat.about());
+		System.out.print("You are now a Trainer: " + pat.about());
 	    }
 	}
 	catch ( IOException e ) { }

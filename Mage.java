@@ -54,6 +54,7 @@ HW32 -- Ye Old Role Playing Game, Expanded
      //overwriting abstract method 
      public void specialize(){
 	 _defense = 70;
+	 _specialPts = 0;
      }
 
     //~~~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~~~~~~~~
