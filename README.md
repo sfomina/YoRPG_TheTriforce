@@ -13,10 +13,10 @@ _In Character:_
  
  _Subclasses:_
  
- **Warrior**
- 1. slash - more accurate, weaker 
- 2. charge - less accurate, stronger
- 3. special move is kingArthurSlam - like charge but even stronger
+**Warrior**
+1. slash - more accurate, weaker 
+2. charge - less accurate, stronger
+3. special move is kingArthurSlam - like charge but even stronger
 
 **Mage**
 
