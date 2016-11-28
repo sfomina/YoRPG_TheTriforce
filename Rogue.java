@@ -21,8 +21,8 @@ HW32 -- Ye Old Role Playing Game, Expanded
     public Rogue() {
 	super();
 	_strength = 80;
-	//add _accuracy for reference Warrior  accuracy is 0.5
-	//add _moves see Warrior onsturctor
+	_accuracy = 0.75;
+	_moves = new String[] {"quickPunch","confuse", "sneakAttack"};
 	_type = "Rogue";
     }
 
@@ -50,19 +50,36 @@ HW32 -- Ye Old Role Playing Game, Expanded
      //overwriting abstract method 
      public void specialize(){
 	 _attack = 0.6;
-	 _defense = 50;
+	 _specialPts = 0;
      }
 
      //~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~
 
-     //see warrior for refernce 
+     public int quickPunch(Character opponent) {
+	 normalize();
+	 double quickPunchAccuracy = _accuracy + 0.2;
+	 int quickPunchStrength = _strength - 5;
+	 return super.attack(opponent, quickPunchAccuracy, quickPunchStrength);
+     }
+
+     public int confuse(Character opponent){
+	 normalize();
+	 double confuseAccuracy = _accuracy - 0.3;
+	 int confuseStrength = _strength + 5;
+	 return super.attack(opponent, confuseAccuracy, confuseStrength);
+     }
+
+     public int sneakAttack(Character opponent){
+	 specialize();
+	 return quickPunch(opponent);
+     }
      
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
      
      public String about(){
-	 return "Description of Rogue";
+	 return "Agile and sneaky, but lacking in power";
      } 
 }//end class Rogue
 
