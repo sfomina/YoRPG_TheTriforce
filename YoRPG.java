@@ -166,14 +166,21 @@ public class YoRPG
 
 		//Mage Moves 
 		else if (pat.getType() == "Mage" && i == 1) {
-		    d1 = ((Warrior) pat).heal();}
+		    d1 = ((Mage) pat).heal();}
 		
 		else if (pat.getType() == "Mage" && i == 2) {
-		    d1 = ((Warrior) pat).posion(smaug);}
+		    d1 = ((Mage) pat).poison(smaug);}
 
 		else if (pat.getType() == "Mage" && i == 3) {
-		    d1 = ((Warrior) pat).shieldOfFire(smaug);}
-		
+		    d1 = ((Mage) pat).shieldOfFire(smaug);}
+
+		//Rogue Moves
+		else if (pat.getType() == "Rogue" && i == 1) {
+		    d1 = ((Rogue) pat).quickPunch(smaug);}
+		else if (pat.getType() == "Rogue" && i == 2) {
+		    d1 = ((Rogue) pat).confuse(smaug);}
+		else if (pat.getType() == "Rogue" && i == 3) {
+		    d1 = ((Rogue) pat).sneakAttack(smaug);}
 
 		//INSERT MOVES of OTHER CLASSES
 		    
