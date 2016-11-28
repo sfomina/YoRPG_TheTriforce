@@ -29,8 +29,8 @@ public class Ranger extends Character {
 	_strength = 75; 
 	_defense = 30;
 	_attack = 1;
-	//add accuracy for reference Warrior accuracy is 0.5
-	//add _moves see Warrior constructor
+        _accuracy = 0.7;
+	_moves = new String[] {"shootArrow" , "throwBomb"};
 	_type = "Ranger";
     }
 
@@ -62,8 +62,19 @@ public class Ranger extends Character {
     }
 
     //~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~
+    public int shootArrow(Character opponent) {
+	normalize();
+	double shootAccuracy =_accuracy - 0.1;
+	int shootStrength = _strength + 3;
+	return super.attack(opponent, shootAccuracy, shootStrength);
+    }
+    
+    public int throwBomb(Character opponent) {
+	specialize();
+	return shootArrow(opponent);
+    }
 
-    //see warrior for reference
+ 
     
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
