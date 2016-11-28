@@ -59,12 +59,14 @@ HW32 -- Ye Old Role Playing Game, Expanded
 
     //~~~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~~~~~~~~~
      public int heal() {
+	 normalize();
 	 int damage = 0;
 	 _hitPts += (int)(Math.random() *100);
 	 return damage;
      }
 
      public int poison(Character opponent) {
+	 normalize();
 	 double poisonAccuracy = _accuracy - 0.2;
 	 int poisonStrength = _strength + 10;
 	 opponent.setPoisoned(true);

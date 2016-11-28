@@ -24,8 +24,8 @@ HW32 -- Ye Old Role Playing Game, Expanded
 	_defense = 10;
 	_attack = 1.3;
 	_type = "Trainer";
-	//add acuracy for reference Warrior accuracy is 0.5
-	//add _moves see warrior constructor 
+	_accuracy = 0.65;
+	_moves = new String[] {"bite", "pounce", "maul"};
     }
 
 
@@ -56,8 +56,25 @@ HW32 -- Ye Old Role Playing Game, Expanded
      }
 
      //~~~~~~~~~~~~~~~~~~~~~MOVES~~~~~~~~~~~~~~~~~~
+ public int bite(Character opponent) {
+	normalize();
+	double biteAccuracy = _accuracy - 0.1;
+	int biteStrength = _strength + 3;
+	return super.attack(opponent, biteAccuracy, biteStrength);
+    }
 
-     //see warrior for reference 
+    public int pounce(Character opponent){
+	normalize();
+	double pounceAccuracy = _accuracy + 0.1;
+	int pounceStrength = _strength - 3;
+	return super.attack(opponent, pounceAccuracy, pounceStrength);
+    }
+    
+    public int maul (Character opponent){
+	specialize();
+	return pounce(opponent); 
+    }
+      
      
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
