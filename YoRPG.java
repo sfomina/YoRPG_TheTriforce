@@ -141,7 +141,7 @@ public class YoRPG
 		while (smaug.getPoisoned()){
 		    smaug.lowerHP(d1);
 		    d2 = smaug.attack( pat );
-		    System.out.println( "\n Poison still in effect - the poison of " + pat.getName() + " dealt" + d1 + " points of damage.");
+		    System.out.println( "\n Poison still in effect - the poison of " + pat.getName() + " dealt " + d1 + " points of damage.");
 		    System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
 				    " for " + d2 + " points of damage.");
 		    smaug.setPoisoned(false);

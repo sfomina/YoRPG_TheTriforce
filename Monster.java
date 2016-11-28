@@ -30,7 +30,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
     public int attack(Character opponent){
 	int damage = super.attack(opponent, _accuracy, _strength);
 	if (_poisoned) {
-	    return (damage - 5);
+	    damage -= 5;
+	    if (damage <0) {damage = 0;}
+	    return damage;
 	}
 	else {
 	    return damage;
