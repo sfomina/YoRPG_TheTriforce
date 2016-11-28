@@ -62,6 +62,9 @@ HW32 -- Ye Old Role Playing Game, Expanded
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      public String about(){
 	 return "Description of Trainer";
-     } 
+     }
+
+     public static void main(String[] args){ }
+     
 }//end class trainer
 
