@@ -64,7 +64,6 @@ public abstract class Character {
 
     public boolean getPoisoned() { return _poisoned;} 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
     
     /*=============================================
       boolean isAlive() -- tell whether I am alive
